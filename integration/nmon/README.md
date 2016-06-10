@@ -32,19 +32,18 @@ ATSD supports two ways of automated data ingestion from servers gathering nmon s
 nmon source code repository:
 [https://github.com/axibase/nmon](https://github.com/axibase/nmon)
 
+
+## Portals
 ![](images/nmon-use-case-ATSD1.jpg "nmon use case ATSD")
 
-##### Predefined nmon visualization portal:
+[Live AIX nmon Portal](http://axibase.com/chartlab/b69e4fcd/3/)
 
-##### Launch live AIX nmon Portal in Axibase Chart Lab.
 
-[Launch](http://axibase.com/chartlab/b69e4fcd/3/)
 
 ![](images/nmon-aix-portal-1500.png "nmon aix portal 1500")
 
-##### Launch live Linux nmon Portal in Axibase Chart Lab.
 
-[Launch](http://axibase.com/chartlab/ac003f06)
+[Live Linux nmon Portal ](http://axibase.com/chartlab/ac003f06)
 
 ![](images/linux_nmon_portal.png "linux_nmon_portal")
 
