@@ -4,7 +4,7 @@ ATSD Storage Finder is an alternative to the default Graphite storage finder.
 
 [More information about Graphite storage finders can be found here.](https://graphite.readthedocs.org/en/latest/storage-backends.html)
 
-[Graphite and ATSD Storage Finder installation instructions can be found here.](https://axibase.com/products/axibase-time-series-database/writing-data/graphite/installing-graphite-atsd/)
+[Graphite and ATSD Storage Finder installation instructions can be found here.](installation.md)
 
 ATSD Storage Finder configuration parameters are set in the `local_settings.py` file.
 

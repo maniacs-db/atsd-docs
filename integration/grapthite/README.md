@@ -6,7 +6,7 @@ Axibase Time Series Database supports Graphite format and Pickle protocol, so to
 
 ATSD has a Storage Finder for Graphite-Web, meaning that you can use ATSD as the back-end for Graphite replacing or augmenting the default Whisper database.
 
-[Learn more about ATSD Storage Finder here.](https://axibase.com/products/axibase-time-series-database/writing-data/graphite/storage-finder/)
+[Learn more about ATSD Storage Finder here.](storage-finder.md)
 
 ![](resources/atsd_protocols_finders3.png)
 
