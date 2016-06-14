@@ -11,7 +11,7 @@ The nmon_deploy.sh script will execute the following steps on each specified ta
 - add a cron task to restart nmon data collection on a schedule
 
 
-Get the latest nmon files, [nmon_deploy.sh](resources/nmon_deploy.sh) and sender script from our GitHub: [https://github.com/axibase/nmon](https://github.com/axibase/nmon)
+Get the latest nmon files, [nmon_deploy.sh](https://github.com/axibase/nmon/blob/master/nmon_deploy.sh) and sender script from our GitHub: [https://github.com/axibase/nmon](https://github.com/axibase/nmon)
 
 nmon_deploy.sh accepts the following flags:
 
