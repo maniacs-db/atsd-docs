@@ -1,10 +1,10 @@
 # Data Forecasting
 
-[Forecasting Example](#example)
+[Forecasting Example](#forecasting-example-with-abnormal-deviation)
 
-[Forecast Settings](#settings)
+[Forecast Settings](#forecast-settings)
 
-[Key Advanced Settings](#key)
+[Key Advanced Settings](#key-advanced-settings)
 
 
 - Axibase Time Series Database includes built-in forecasting algorithms that can predict abnormalities based on historical data.
