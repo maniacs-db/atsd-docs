@@ -18,7 +18,7 @@ URL: http://atsd_server.com:8088/api/v1/series
 
 In the request be sure to specify:
 
-endDate – end of the selection interval. Specified in ISO format or using [endtime](https://axibase.com/products/axibase-time-series-database/visualization/end-time/) syntax
+endDate – end of the selection interval. Specified in ISO format or using [endtime](../end-time-syntax.md) syntax
 
 interval – duration of the selection interval, specified as unit and count
 

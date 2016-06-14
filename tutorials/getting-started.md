@@ -4,7 +4,7 @@ The purpose of this article is to guide the user through his first steps when st
 
 ##### Step 1:
 
-[Download and Install Axibase Time-Series Database.](https://axibase.com/products/axibase-time-series-database/download-atsd/)
+[Download and Install Axibase Time-Series Database.](https://github.com/axibase/atsd-docs/blob/master/installation/README.md)
 
 ##### Step 2:
 
