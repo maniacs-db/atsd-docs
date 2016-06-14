@@ -6,7 +6,7 @@ The sender script is used to stream nmon data into the ATSD as it is written int
 
 The nmon_sender_ssh.sh script creates an ssh-tunnel and uses it to send nmon data to ATSD.
 
-[https://github.com/axibase/nmon/blob/master/nmon_sender_ssh.sh](https://github.com/axibase/nmon/blob/master/nmon_sender_ssh.sh)
+[resources/nmon_sender_ssh.sh](https://github.com/axibase/nmon/blob/master/nmon_sender_ssh.sh)
 
 The [SSH Tunneling](http://axibase.com/products/axibase-time-series-database/writing-data/nmon/ssh-tunneling/) guide explains how to setup and test the tunnel manually.
 
@@ -16,9 +16,9 @@ Telnet
 
 The nmon_sender_telnet.sh script uses telnet to send nmon data to ATSD.
 
-[https://github.com/axibase/nmon/blob/master/nmon_sender_telnet.sh](https://github.com/axibase/nmon/blob/master/nmon_sender_telnet.sh)
+[resources/nmon_sender_telnet.sh](https://github.com/axibase/nmon/blob/master/nmon_sender_telnet.sh)
 
-Unpack the script to the /opt/nmon directory, as described in the [Telnet File Streaming guide](/products/axibase-time-series-database/writing-data/nmon/nmon-file-streaming/).
+Unpack the script to the /opt/nmon directory, as described in the [Telnet File Streaming guide](https://axibase.com/products/axibase-time-series-database/writing-data/nmon/nmon-file-streaming/).
 
 #### Script Arguments
 
