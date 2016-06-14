@@ -8,7 +8,7 @@
 
 Below is a snapshot extract from an nmon file displaying its format and how it records the collected data:
 
-```
+```csv
 ZZZZ,T0009,23:02:43,14-OCT-2014
 CPU01,T0009,58.9,27.9,6.6,6.6
 CPU02,T0009,0.4,0.6,0.0,99.0
