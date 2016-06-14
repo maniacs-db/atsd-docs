@@ -3,9 +3,9 @@ nmon File Streaming over Telnet
 
 Execute the steps in this guide in order to start streaming nmon datainto Axibase Time-Series Database over telnet.
 
-If you would like to stream nmon data using an SSH Tunnel, use our [nmon File Streaming using an SSH Tunnel guide](http://axibase.com/products/axibase-time-series-database/writing-data/nmon/file-streaming/ "nmon File Streaming using an SSH Tunnel").
+If you would like to stream nmon data using an SSH Tunnel, use our [nmon File Streaming using an SSH Tunnel guide](ssh-tunneling.md "nmon File Streaming using an SSH Tunnel").
 
-If you would like to monitor multiple machines using nmon, use our [Installing nmon on Multiple Machines guide](http://axibase.com/products/axibase-time-series-database/writing-data/nmon/nmon-on-multiple-machines/ "Installing nmon on multiple machines").
+If you would like to monitor multiple machines using nmon, use our [Installing nmon on Multiple Machines guide](deploy.md).
 
 The main purpose of the nmon tool is to monitor performance information for CPU, memory, network, disk, virtual memory, top process, and other parts of the server or virtual machine.
 
@@ -150,5 +150,5 @@ Custom portals can be created using [HTML5 Widgets](http://axibase.com/products/
 
 ![](resources/nmon-linux-portal.png "nmon linux portal")
 
-Once nmon data is streamed into the ATSD and predefined portals are working, you can use the [Rule Engine](http://axibase.com/products/axibase-time-series-database/rule-engine/ "Rule Engine") and
+Once nmon data is streamed into the ATSD and predefined portals are working, you can use the [Rule Engine](../../rule-engine/rule-engine.md "Rule Engine") and
 [Forecasting](http://axibase.com/products/axibase-time-series-database/forecasts/ "Forecasts") tools for analyzing and planning capacity. Custom portals can be created using [HTML5 widgets](http://axibase.com/products/axibase-time-series-database/visualization/ "Visualization").
