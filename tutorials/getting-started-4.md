@@ -22,7 +22,7 @@ Enter at least 3 values above 50 on the Data Entry page and observe an alert rai
 
 [Writing Data](https://axibase.com/products/axibase-time-series-database/writing-data/)
 
-[Reading Data](https://axibase.com/products/axibase-time-series-database/reading-data/)
+[Reading Data](../api#api-clients)
 
 [Exporting Data](https://axibase.com/products/axibase-time-series-database/exporting-data/)
 
