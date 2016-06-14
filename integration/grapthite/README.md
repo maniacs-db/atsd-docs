@@ -23,5 +23,5 @@ ATSD has a Storage Finder for Graphite-Web, meaning that you can use ATSD as the
 - [Grafana](http://grafana.org/) – a general purpose graphite dashboard replacement with feature rich graph editing and dashboard creation interface.
 
 
-You can review the complete list of supported tools [here](resources/tools.html).
+You can review the complete list of supported tools [here](http://graphite.readthedocs.org/en/latest/tools.html).
 
