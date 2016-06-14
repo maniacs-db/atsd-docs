@@ -6,6 +6,8 @@ Insert messages.
 
 * Entity name, source, type, severity, and tag names cannot contain non-printable characters. They are case-insensitive and are converted to lower case when stored.
 * Message text and message tag values are case-sensitive and are stored as submitted.
+* Field values are trimmed of leading and trailing non-printable characters including tab, line feed, and space.  
+* Primary key of the message is composed of type, source, entity, and time. Messages that have the same primary key but different values in other fields such as message text or tags are deduplicated by discarding all duplicates except one.
 
 ## Request
 
@@ -90,3 +92,12 @@ curl https://atsd_host:8443/api/v1/messages/insert \
   --request POST \
   --data @file.json
 ```
+
+## Additional Examples
+* [Message with Date](/api/data/messages/examples/insert/messages-insert-messages-with-date.md)
+* [Message with Tags](/api/data/messages/examples/insert/messages-insert-messages-with-tags.md)
+* [Multiple Messages with Date](/api/data/messages/examples/insert/messages-insert-multiple-messages-for-date.md)
+* [Multiple Messages with Entity](/api/data/messages/examples/insert/messages-insert-multiple-messages-for-entity.md)
+* [Non-persisted Message](/api/data/messages/examples/insert/messages-insert-non-persisted-messages.md)
+
+
