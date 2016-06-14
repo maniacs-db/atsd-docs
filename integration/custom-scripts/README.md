@@ -14,13 +14,13 @@ Important: only BSD version is supported. For example, the GNU version is not su
 
 Check if ‘nc’ is installed:
 
-```
+```sh
 nc
 ```
 
 nc (BSD) output will be as follows:
 
-```
+```sh
 usage: nc [-46DdhklnrStUuvzC] [-i interval] [-p source_port]
 [-s source_ip_address] [-T ToS] [-w timeout] [-X proxy_version]
 [-x proxy_address[:port]] [hostname] [port[s]]
@@ -30,13 +30,13 @@ If nc (BSD) is not available, install the appropriate package using software rep
 
 Ubuntu:
 
-```
+```sh
 sudo apt-get install netcat-openbsd
 ```
 
 RedHat Enterprise Linux (RHEL):
 
-```
+```sh
 yum install nc
 ```
 
@@ -46,13 +46,13 @@ mpstat and iostat are included in the sysstat package. If this package is not in
 
 Ubuntu:
 
-```
+```sh
 sudo apt-get install sysstat
 ```
 
 RHEL:
 
-```
+```sh
 sudo yum install sysstat
 ```
 
@@ -62,13 +62,13 @@ Download the [atsd_collectors.tar.gz](http://axibase.com/ftp/lz/atsd_collectors
 
 ##### Unpack the archive:
 
-```
+```sh
 tar xzf atsd_collectors.tar.gz
 ```
 
 ##### Check that scripts have executable flag:
 
-```
+```sh
 cd collectors
 chmod a+x *
 ```
@@ -84,7 +84,7 @@ PORT – ATSD telnet port
 
 Run the collectors by executing script start-all-collectors.sh:
 
-```
+```sh
 /opt/atsd/collectors/start-all-collectors.sh
 ```
 
