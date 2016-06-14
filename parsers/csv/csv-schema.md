@@ -43,7 +43,7 @@ Explanation:
 
 Commands:
 
-```
+```ls
 series e:sensor01 m:power_kwh=19.2 d:2015-10-29T00:00:00Z t:status=provis
 series e:sensor02 m:power_kwh=11.3 d:2015-10-29T00:00:00Z t:status=ok
 series e:sensor01 m:power_kwh=19.8 d:2015-10-29T00:05:00Z t:status=ok
