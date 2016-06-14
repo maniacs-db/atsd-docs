@@ -1,6 +1,6 @@
 ##### Step 8:
 
-Open the [Export Page](/products/axibase-time-series-database/exporting-data/data-export/) located on the main navigation bar, export data for my-entity/my-metric into CSV and try display it as HTML: [http://atsd_server.com:8088/export](http://nur.axibase.com:8088/export)
+Open the [Export Page](https://axibase.com/products/axibase-time-series-database/exporting-data/data-export/) located on the main navigation bar, export data for my-entity/my-metric into CSV and try display it as HTML: [http://atsd_server.com:8088/export](http://nur.axibase.com:8088/export)
 
 ![](resources/hello_world_export1.png)
 
@@ -18,7 +18,7 @@ URL: http://atsd_server.com:8088/api/v1/series
 
 In the request be sure to specify:
 
-endDate – end of the selection interval. Specified in ISO format or using [endtime](/products/axibase-time-series-database/visualization/end-time/) syntax
+endDate – end of the selection interval. Specified in ISO format or using [endtime](https://axibase.com/products/axibase-time-series-database/visualization/end-time/) syntax
 
 interval – duration of the selection interval, specified as unit and count
 

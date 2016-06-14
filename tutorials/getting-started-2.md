@@ -40,7 +40,7 @@ Resulting Portal:
 
 ![](resources/hello_world_portal_view1.png)
 
-[Use our Visualization guide to add more widgets to the portal.](/products/axibase-time-series-database/visualization/)
+[Use our Visualization guide to add more widgets to the portal.](https://axibase.com/products/axibase-time-series-database/visualization/)
 
 [Continue to Next Page](getting-started-3.md)
 

@@ -4,7 +4,7 @@ The purpose of this article is to guide the user through his first steps when st
 
 ##### Step 1:
 
-[Download and Install Axibase Time-Series Database.](/products/axibase-time-series-database/download-atsd/)
+[Download and Install Axibase Time-Series Database.](https://axibase.com/products/axibase-time-series-database/download-atsd/)
 
 ##### Step 2:
 
@@ -24,7 +24,7 @@ entity = my-entity
 value = 24
 ```
 
-To simplify this example, we will ignore tags. [Tags can be used to enrich the time series.](/products/axibase-time-series-database/data-model/entity-and-metric-tags/)
+To simplify this example, we will ignore tags. [Tags can be used to enrich the time series.](https://axibase.com/products/axibase-time-series-database/data-model/entity-and-metric-tags/)
 
 ##### Step 4:
 
