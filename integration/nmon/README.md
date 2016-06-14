@@ -17,7 +17,7 @@ On AIX, nmon is pre-installed on AIX 5.3, 6.1 and newer versions by default, whi
 
 On Linux, nmon is [open sourced under GPL license](https://github.com/axibase/nmon). It can be downloaded as an [executable binary](https://github.com/axibase/nmon/releases) or can becompiled from source. Supported distributions include Ubuntu, Debian, RHEL, CentOS, Fedora, SLES, and OpenSUSE.
 
-nmon file format is supported in Axibase Time Series Database natively so that ATSD can be deployed as a centralized repository of nmon-sourced statistics and system commands collected from remote systems while providing access to [Visualization](http://axibase.com/products/axibase-time-series-database/visualization/ "Visualization"), [Alerting](http://axibase.com/products/axibase-time-series-database/rule-engine/ "Rule Engine") and [Forecasting](http://axibase.com/products/axibase-time-series-database/forecasts/ "Forecasts") features.
+nmon file format is supported in Axibase Time Series Database natively so that ATSD can be deployed as a centralized repository of nmon-sourced statistics and system commands collected from remote systems while providing access to [Visualization](http://axibase.com/products/axibase-time-series-database/visualization/ "Visualization"), [Alerting](../../rule-engine/rule-engine.md "Rule Engine") and [Forecasting](http://axibase.com/products/axibase-time-series-database/forecasts/ "Forecasts") features.
 
 [![](resources/widget-bar-2.png "widget bar 2")](http://axibase.com/products/axibase-time-series-database/visualization/widgets/)
 
