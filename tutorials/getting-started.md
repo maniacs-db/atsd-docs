@@ -14,7 +14,7 @@ Login into ATSD web interface at https://atsd_hostname:8443/
 
 Open the Data Entry page located under the Metrics tab in the top menu:
 
-![](http://axibase.com/wp-content/uploads/2015/06/series.png)
+![](resources/series.png)
 
 Complete the Entity, Metric and Value fields, then press Send:
 
