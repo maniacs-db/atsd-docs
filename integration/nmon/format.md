@@ -2,12 +2,12 @@
 
 [Snapshot Example](#extract)
 
-[Collected Metrics](#collected)
+[Collected Metrics](#complete-list-of-collected-metrics)
 
-[Derived Metrics](#derived)
+[Derived Metrics](#derived-metrics)
 
 Below is a snapshot extract from an nmon file displaying its format and how it records the collected data:
-
+<a name="extract"></a>
 ```csv
 ZZZZ,T0009,23:02:43,14-OCT-2014
 CPU01,T0009,58.9,27.9,6.6,6.6
