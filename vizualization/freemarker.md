@@ -81,7 +81,22 @@ Returns collected metrics for a particular entity.
 </#list
 ```
 
-<script src="http://gist.github.com/de95557d743b0129f519.js"></script><noscript>View the code on <a href="https://gist.github.com/de95557d743b0129f519">Gist</a>.</noscript>
+```
+<#assign metrics = getMetrics("${entity}") >      
+<#list metrics as metric>
+<#if metric?index_of("cpu") gte 0>
+  [widget]
+      type = chart
+      timespan = 1 hour
+    [series]
+        label = ${metric}
+        entity = ${entity}
+        metric = ${metric}
+        statistic = avg
+        period = 5 minute
+</#if>
+</#list>
+```
 
 ##### isMetric
 
@@ -93,8 +108,14 @@ Boolean
 
 Returns true if a metric exists.
 
-<script src="http://gist.github.com/aec1288aeeffed9048bc.js"></script><noscript>View the code on <a href="https://gist.github.com/aec1288aeeffed9048bc">Gist</a>.</noscript>
-
+```
+<#if isMetric("nmon.processes.blocked") >
+    [series]        
+        label = blocked
+        entity = ${entity}
+        metric = nmon.processes.blocked
+</#if>   
+```
 ##### isMetricCollected
 
 ```javascript
@@ -105,8 +126,14 @@ Boolean
 
 Returns true if there is some data for metric and entity inserted in last 24 hours.
 
-<script src="http://gist.github.com/112f84798db0eded1bea.js"></script><noscript>View the code on <a href="https://gist.github.com/112f84798db0eded1bea">Gist</a>.</noscript>
-
+```
+<#if isMetricCollected("nmon.processes.blocked", "${entity}") >
+    [series]        
+        label = blocked
+        entity = ${entity}
+        metric = nmon.processes.blocked
+</#if>  
+```
 ##### getProperty
 
 ```javascript
@@ -117,8 +144,15 @@ Returns a string collection.
 
 Retrieve a collection of property objects for specified entity, property type and tag.
 
-<script src="http://gist.github.com/51ef46f7fde74b004957.js"></script><noscript>View the code on <a href="https://gist.github.com/51ef46f7fde74b004957">Gist</a>.</noscript>
 
+```
+<#if isMetricCollected("nmon.processes.blocked", "${entity}") >
+    [series]        
+        label = blocked
+        entity = ${entity}
+        metric = nmon.processes.blocked
+</#if>
+```
 ##### getSeriesProperties
 
 ```javascript
@@ -130,7 +164,18 @@ Returns property objects for specified entity and property type.
 Retrieve a collection of property objects for specified entity and property type.
 If no entity is specified, then retrieves a collection of property objects for all entities with the specified property type.
 
-<script src="http://gist.github.com/ab7af1d8d030bab23cb8.js"></script><noscript>View the code on <a href="https://gist.github.com/ab7af1d8d030bab23cb8">Gist</a>.</noscript>
+```
+<#assign ebs_volume_tags = getSeriesProperties(volume, "aws_ec2.attachmentset") >
+<#list ebs_volume_tags as volume_tags>
+  <#if volume_tags.entity == volume>
+[series]
+    label = ${volume}
+    label = ${volume_tags.key.device}
+    entity = ${volume}
+    metric = aws_ebs.volumequeuelength.maximum
+  </#if>
+</#list>
+```
 
 ##### getTagMaps
 
@@ -144,8 +189,21 @@ Retrieve a collection of unique tag maps for metric and entity.
 [, hours] is an optional parameter, which specifies the time interval (in hours) for searching unique tag values.
 Default interval is 24 hours.
 
-<script src="http://gist.github.com/6b0777fa7ab3ea8796de.js"></script><noscript>View the code on <a href="https://gist.github.com/6b0777fa7ab3ea8796de">Gist</a>.</noscript>
-
+```
+<#assign procMaps = getTagMaps("nmon.process.%cpu", "${entity}") >  
+<#list procMaps as procMap>
+    [series]
+        label = ${procMap['command']}
+        entity = ${entity}
+        metric = nmon.process.%cpu  
+        [tag]
+            name = pid
+            value = ${procMap['pid']}        
+        [tag]
+            name = command
+            value = ${procMap['command']}
+</#list>
+```
 ##### atsd_last
 
 ```javascript
@@ -156,7 +214,9 @@ Returns double.
 
 Retrieves the last value for time series or null.
 
-<script src="http://gist.github.com/27479e80aefdda287a3f.js"></script><noscript>View the code on <a href="https://gist.github.com/27479e80aefdda287a3f">Gist</a>.</noscript>
+```
+atsd_last("nurswgvml007", "nmon.cpu.idle%", "id")
+```
 
 ##### memberOf
 
@@ -168,7 +228,13 @@ Boolean
 
 Returns true if an entity belongs to any of specified entity groups.
 
-<script src="http://gist.github.com/afe3b5f93af4fdf49835.js"></script><noscript>View the code on <a href="https://gist.github.com/afe3b5f93af4fdf49835">Gist</a>.</noscript>
+```
+<#if memberOf("nurswgvml007", "aix-servers") >
+    [series]        
+        entity = ${entity}
+        metric = lpar.used_units
+</#if> 
+```
 
 ##### memberOfAll
 
@@ -180,7 +246,14 @@ Boolean
 
 Returns true if an entity belongs to all of the entity groups.
 
-<script src="http://gist.github.com/87936cc6e009b2620308.js"></script><noscript>View the code on <a href="https://gist.github.com/87936cc6e009b2620308">Gist</a>.</noscript>
+```
+<#if isMetricCollected("nmon.processes.blocked", "${entity}") >
+    [series]        
+        label = blocked
+        entity = ${entity}
+        metric = nmon.processes.blocked
+</#if>
+```
 
 ##### lastInsertTime & lastInsertDate
 
@@ -196,9 +269,22 @@ Double
 
 Returns the last insert time for the entity or entity/metric combination in milliseconds (Time) or ISO format (Date). Metric is an optional parameter.
 
-<script src="http://gist.github.com/heinrichvk/88c6545dbb88041bf6d3.js"></script><noscript>View the code on <a href="https://gist.github.com/heinrichvk/88c6545dbb88041bf6d3">Gist</a>.</noscript>
+```
+<#assign ebs_volume_tags = getSeriesProperties(volume, "aws_ec2.attachmentset") >
+   <#list ebs_volume_tags as volume_tags>
+      <#if volume_tags.entity == volume>
+	[series]
+		label = ${volume}
+        label = ${volume_tags.key.device}
+		entity = ${volume}
+		metric = aws_ebs.volumequeuelength.maximum
+      </#if>
+   </#list
+```
 
-<script src="http://gist.github.com/heinrichvk/9fc870336a42d1ecea3d.js"></script><noscript>View the code on <a href="https://gist.github.com/heinrichvk/9fc870336a42d1ecea3d">Gist</a>.</noscript>
+```
+lastInsertDate('nurswgvml007', 'cpu_busy')
+```
 
 ##### getEntitiesForGroup:
 
@@ -216,7 +302,19 @@ Find all entities in a particular entity group, useful when building portals tha
 The method returns group member that have inserted data over the last N hours.
 If hours is not specified or non-positive, all group members are returned.
 
-<script src="http://gist.github.com/982c0cb9c0ea6c20f478.js"></script><noscript>View the code on <a href="https://gist.github.com/982c0cb9c0ea6c20f478">Gist</a>.</noscript>
+```
+<#assign servers = getEntitiesForGroup("VMware Hosts") >   
+<#list servers as server>
+    [series]
+        entity = ${server}
+        metric = cpu.used
+</#list>
+<#list servers as server>
+    [series]
+        entity = ${server}
+        metric = cpu.used
+</#list>
+```
 
 ##### getEntitiesForTags:
 
@@ -228,7 +326,22 @@ Returns a string collection.
 
 Find find entities by expression, based on tags.
 
-<script src="http://gist.github.com/4cd99c834ad9e63258bc.js"></script><noscript>View the code on <a href="https://gist.github.com/4cd99c834ad9e63258bc">Gist</a>.</noscript>
+```
+<#assign servers = getEntitiesForTags("", "(app == '${app}' OR '${app}' == '' AND app != '') AND 
+                                            (dc == '${dc}' OR '${dc}' == '' AND dc != '')") >
+<#list servers as server>
+    [series]
+        label = ${server}
+        entity = ${server}
+        metric = physical_cpu_units_used
+</#list>
+<#assign servers = getEntitiesForTags("", "application = '${entity}'") >   
+<#list servers as server>
+    [series]
+        entity = ${server}
+        metric = physical_cpu_units_used
+</#list>
+```
 
 In the first example we are searching for entities with two tags, the required value can be specified directly in the browser:
 
@@ -289,11 +402,23 @@ Advanced functions and aggregations can be added to freemarker portals to enhanc
 
 ##### The freemarker [series] are given an alias, that can then be used to sum the loaded data as in the example below:
 
-<script src="http://gist.github.com/e6dfcaa018b1bfc5d837.js"></script><noscript>View the code on <a href="https://gist.github.com/e6dfcaa018b1bfc5d837">Gist</a>.</noscript>
+```
+<#assign servers = getEntitiesForGroup("Linux") >
+ <#list servers as server>
+	[series]
+		entity = ${server}
+		metric = cpu_busy
+		alias = cpuused_${server}
+ </#list>
+```
 
 ##### The freemarker [series] data can be aggregated by ATSD prior to loading into the portal:
 
-<script src="http://gist.github.com/31f5e1115907cd15faec.js"></script><noscript>View the code on <a href="https://gist.github.com/31f5e1115907cd15faec">Gist</a>.</noscript>
+```
+[series]
+    label = P99 CPU Used
+    value = 0 <#list servers as server> + percentile(99,'cpuused_${server}','1 day')</#list>
+```
 
 #### Freemarker Expressions Summary Table
 
