@@ -28,7 +28,7 @@ To create a new portal:
     You can also create your own CSS and upload a folder with your personalized theme to `/opt/atsd/conf/portal/themes/`.
     After you upload your custom theme, it will appear in the list of available themes. To apply your style, select it from the Theme list.
     
-    **Content**: specify settings of the portal itself and for widgets you want to add to the portal. For more information, see [Portal Layout](http://axibase.com/products/axibase-time-series-database/visualization/widgets/portal-settings/).
+    **Content**: specify settings of the portal itself and for widgets you want to add to the portal. For more information, see [Portal Layout](portal-settings.md).
     
     ![](resources/portal_conf_edit.png)
 
