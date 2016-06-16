@@ -45,12 +45,12 @@ You can use placeholders while writing portal contents. When you assign the new
 ## ATSD Built-in Portal Gallery
 
 | --- | --- | --- |
-| [HP OpenView](resources/ovpm_portal_linux.png) ![](resources/ovpm_portal_linux-705x560.png) | [Oracle Host](resources/oracle_host_portal-1030x791.png) ![](resources/oracle_host_portal-705x541.png) | [Oracle Databases](resources/oracle_databases_poral3.png) ![](resources/oracle_databases_poral3-705x596.png) |
-| [cAdvisor Host](resources/cadvisor_host_portal3.png) ![](resources/cadvisor_host_portal3-705x559.png) | [cAdvisor Disk Detail](resources/cadvisor_disk_detail_portal2.png) ![](resources/cadvisor_disk_detail_portal2-705x562.png) | [cAdvisor Overview](resources/cadvisor_overview_portal-1030x738.png) ![](resources/cadvisor_overview_portal-705x505.png) | 
-| [SCOM SQL Server](resources/scom_sql_server_portal-1030x659.png) ![](resources/scom_sql_server_portal-705x451.png) | [ATSD Host](resources/fresh_atsd_portal21.png) ![](resources/fresh_atsd_portal21-705x435.png) | [SolarWinds Base](resources/solarwinds_base_portal_31.png) ![](resources/solarwinds_base_portal_31-705x487.png) | 
-| [tcollector](resources/tcollector-portal1-1030x689.png) ![](resources/tcollector-portal1-705x472.png) | [VMware Host](resources/vmware_host_portal-1030x691.png) ![](resources/vmware_host_portal-705x473.png) | [VMware Host VM Breakdown](resources/vmware_hostvm_breakdown_portal-1030x691.png) ![](resources/vmware_hostvm_breakdown_portal-705x473.png) |
-|[VMware Cluster](resources/vmware_cluster_portal-1030x694.png) ![](resources/vmware_cluster_portal-705x475.png) | [Vmware VM](resources/vmware_vm_portal-1030x696.png) ![](resources/vmware_vm_portal-705x476.png) | [SCOM Server](resources/scom_server_portal-1030x660.png) ![](resources/scom_server_portal-705x452.png)
-| [nmon AIX](resources/nmon-aix-portal-1000-1030x526.png) ![](resources/nmon-aix-portal-1000-705x360.png) |
+| HP OpenView ![](resources/ovpm_portal_linux-705x560.png) | Oracle Host ![](resources/oracle_host_portal-705x541.png) | Oracle Databases ![](resources/oracle_databases_poral3-705x596.png) |
+| cAdvisor Host ![](resources/cadvisor_host_portal3-705x559.png) | cAdvisor Disk Detail ![](resources/cadvisor_disk_detail_portal2-705x562.png) | cAdvisor Overview ![](resources/cadvisor_overview_portal-705x505.png) | 
+| SCOM SQL Server ![](resources/scom_sql_server_portal-705x451.png) | ATSD Host ![](resources/fresh_atsd_portal21-705x435.png) | SolarWinds Base ![](resources/solarwinds_base_portal_31-705x487.png) | 
+| tcollector ![](resources/tcollector-portal1-705x472.png) | VMware Host ![](resources/vmware_host_portal-705x473.png) | VMware Host VM Breakdown ![](resources/vmware_hostvm_breakdown_portal-705x473.png) |
+| VMware Cluster ![](resources/vmware_cluster_portal-705x475.png) | Vmware VM ![](resources/vmware_vm_portal-705x476.png) | SCOM Server ![](resources/scom_server_portal-705x452.png)
+| nmon AIX ![](resources/nmon-aix-portal-1000-705x360.png) |
 
 ### Learn How To
 
