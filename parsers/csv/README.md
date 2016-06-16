@@ -36,8 +36,8 @@ series e:nurswgvml001 d:2015-11-15T00:00:00Z m:space_used_%=14.4 t:disk=/dev/sda
 |  <p>Entity Column</p>  |  <p>Name of column in csv file containing the entities, for example: host or node.</p>  <p>Multiple columns can be specified in Entity Column field in order to concatenate their values into a composite entity name using dash symbol – as a token.</p>  <p>For example:</p>  <p>Souce CSV file:</p>  <p>`Year,Source,Destination,Travelers`</p>  <p>`1995,Moscow,Berlin,2000000`</p>  <p>Entity Columns:</p>  <p>`Source,Destination`</p>  <p>Resulting Entity:</p>  <p>`Moscow-Berlin`</p>  | 
 |  <p>Entity Prefix</p>  |  <p>Prefix added to entity names.</p>  | 
 |  <p>Default Entity</p>  |  <p>All data written to specific entity</p>  | 
-|  <p>Replace Entities</p>  |  <p>Replace entity names in the input file with their aliases from the selected [Replacement Table](/products/axibase-time-series-database/download-atsd/administration/entity-lookup/).</p>  <p>For example if Replacement Table contains a mapping `103323213=sensor001` and the entity of the CSV file is named `103323213` then it will be saved in ATSD as `sensor001`.</p>  | 
-|  <p>Process Events</p>  |  <p>Process incoming data in the [Rule Engine](/products/axibase-time-series-database/rule-engine/) in addition to storing it in the database.</p>  | 
+|  <p>Replace Entities</p>  |  <p>Replace entity names in the input file with their aliases from the selected [Replacement Table](../../administration/entity-lookup.md).</p>  <p>For example if Replacement Table contains a mapping `103323213=sensor001` and the entity of the CSV file is named `103323213` then it will be saved in ATSD as `sensor001`.</p>  | 
+|  <p>Process Events</p>  |  <p>Process incoming data in the [Rule Engine](../../rule-engine/rule-engine.md) in addition to storing it in the database.</p>  | 
 |  <p>Metric Prefix</p>  |  <p>Prefix added to metric names.</p>  | 
 |  <p>Metric Name Column</p>  |  <p>Column containing metric names</p>  | 
 |  <p>Metric Value Column</p>  |  <p>Column containing metric values</p>  | 
@@ -54,7 +54,7 @@ series e:nurswgvml001 d:2015-11-15T00:00:00Z m:space_used_%=14.4 t:disk=/dev/sda
 |  <p>Ignored Columns</p>  |  <p>List of columns ignored in METRIC and MESSAGE commands.</p>  <p>These columns are retained in PROPERTY commands.</p>  | 
 |  <p>Renamed Columns</p>  |  <p>List of column names to substitute input column headers, one mapping per line.</p>  <p>Usage: `inputname=storedname`</p>  | 
 |  <p>Header</p>  |  <p>Header to be used if the file contains no header or to replace existing header.</p>  | 
-|  <p>Schema</p>  |  <p>[Schema](/products/axibase-time-series-database/writing-data/csv/csv-schema/) defines how to process cells based on their position.</p>  | 
+|  <p>Schema</p>  |  <p>[Schema](csv-schema.md) defines how to process cells based on their position.</p>  | 
 
 
 Columns contained in the CSV file that are not specified in any field in the parser will be imported as metrics.
@@ -64,7 +64,7 @@ Columns contained in the CSV file that are not specified in any field in the par
 | Setting | Description | 
 | --- | --- | 
 |  <p>Delimiter</p>  |  <p>Separator dividing values: comma, semicolon, or tab.</p>  | 
-|  <p>Line Delimiter</p>  |  <p>End-of-line symbol: EOL `(\\n, \\rn)` or semicolon `;`</p>  | 
+|  <p>Line Delimiter</p>  |  <p>End-of-line symbol: EOL `(\n, \r\n)` or semicolon `;`</p>  | 
 |  <p>Text Qualifier</p>  |  <p>Escape character to differentiate separator as literal value.</p>  | 
 |  <p>Comment Symbol</p>  |  <p>Lines starting with comment symbol such as hash `#` are ignored.</p>  | 
 |  <p>Padding Symbol</p>  |  <p>Symbol appended to text values until all cells in the given column have the same width.</p>  <p>Applies to fixed-length formats such as .dat format.</p>  | 
@@ -80,27 +80,27 @@ Columns contained in the CSV file that are not specified in any field in the par
 #### Column-based Parser Examples:
 
 
-- [Weather Data](/products/axibase-time-series-database/writing-data/csv/weather-csv-example/)
-- [Air Quality](/products/axibase-time-series-database/writing-data/csv/air-quality-csv-example/)
+- [Weather Data](examples/weather.md)
+- [Air Quality](examples/air-quality.md)
 
 
 #### Schema-based Parser Examples:
 
 
-- [Basic Example](/products/axibase-time-series-database/writing-data/csv/basic-schema-field/)
-- [Columnar Format](http://axibase.com/products/axibase-time-series-database/writing-data/csv/columnar-schema/)
-- [Columnar Period Format](http://axibase.com/products/axibase-time-series-database/writing-data/csv/columnar-period-schema/)
-- [No Header](/products/axibase-time-series-database/writing-data/csv/no-header-schema/)
-- [Multi-Column Timestamp](/products/axibase-time-series-database/writing-data/csv/multi-column-timestamp/)
-- [Multiple Metrics in Header](/products/axibase-time-series-database/writing-data/csv/multiple-metrics-in-header/)
-- [Metric Column](/products/axibase-time-series-database/writing-data/csv/metric-column-schema/)
-- [Messages](/products/axibase-time-series-database/writing-data/csv/message-schema/)
-- [Properties](/products/axibase-time-series-database/writing-data/csv/properties-schema/)
-- [Messages with Filter](/products/axibase-time-series-database/writing-data/csv/message-with-filter-schema/)
-- [Series with Tags](/products/axibase-time-series-database/writing-data/csv/series-tags-schema/)
-- [notEmptyUp](/products/axibase-time-series-database/writing-data/csv/notemptyup-schema/)
-- [notEmptyLeft](/products/axibase-time-series-database/writing-data/csv/not-empty-left-schema/)
-- [Versioned Series](/products/axibase-time-series-database/writing-data/csv/versioned-series-schema/)
-- [Block-Appended](/products/axibase-time-series-database/writing-data/csv/block-appended-schema/)
+- [Basic Example](examples/basic.md)
+- [Columnar Format](examples/columnar-schema.md)
+- [Columnar Period Format](examples/columnar-period-schema.md)
+- [No Header](examples/no-header.md)
+- [Multi-Column Timestamp](examples/multi-column-timestamp.md)
+- [Multiple Metrics in Header](examples/multiple-metrics-in-header.md)
+- [Metric Column](examples/metric-column-schema.md)
+- [Messages](examples/message-schema.md)
+- [Properties](examples/properties.md)
+- [Messages with Filter](examples/message-with-filter-schema.md)
+- [Series with Tags](examples/series-tags-schema.md)
+- [notEmptyUp](examples/notemptyup-schema.md)
+- [notEmptyLeft](examples/not-empty-left-schema.md)
+- [Versioned Series](examples/versioned-series-schema.md)
+- [Block-Appended](examples/block-appended-schema.md)
 
 

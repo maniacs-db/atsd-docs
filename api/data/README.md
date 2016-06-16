@@ -18,7 +18,7 @@ The Data API lets you insert and retrieve series, properties, messages, and aler
 * Messages
   - [insert](messages/insert.md)
   - [query](messages/query.md)
-  - [stats](messages/stats-query.md)
+  - [statistics](messages/stats-query.md)
 * Alerts
   - [query](alerts/query.md)
   - [update](alerts/update.md)
@@ -26,7 +26,8 @@ The Data API lets you insert and retrieve series, properties, messages, and aler
   - [history query](alerts/history-query.md)
 * Extended
   - [command insert](ext/command.md)
-  - [csv upload](ext/csv.md)
+  - [csv upload](ext/csv-upload.md)
+  - [nmon upload](ext/nmon-upload.md)
 
 ## Request Methods
 
@@ -75,6 +76,12 @@ Refer to [ISO 8601 date formats](date-format.md).
 * entity, metric, property type, property key name, and tag name must consist from printable characters.
 * entity, metric, property type, property key name, property key value, and tag name is case-insensitive and is converted to lowercase when stored in ATSD. Other values are case-sensitive and are stored as received.
 * Values are trimmed of starting and trailing line breaks (CR,LF symbols).
+
+## Wildcards
+
+`*` wildcard is supported in entity filter and tag values. 
+
+Literal symbols `?` and `*` should be escaped with single backslash.
 
 ## Response Codes
 
