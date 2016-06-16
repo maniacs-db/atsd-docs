@@ -11,37 +11,34 @@ To create a new portal:
 2. From the top menu, click Configuration > Portals.
 3. Scroll down to the bottom of the Portals page and click Create.
 4. On the Portal Editor page, provide the following configuration and click Save.
-
-
-Name: provide a name for the new portal.
-
-Enabled: select the check box to enable the portal (otherwise you will not be able to see visualized data).
-
-Template: select the check box if you want your new portal to be template that you can later assign to various entities. Note, that you will be able to change portal type any time by selecting and deselecting the check box.
-
-Display Index: index defines the order with which portals assigned to an entity are displayed. To view portals assigned to an entity:
-
-a. Click Entities from the top menu.
-b. Click the Portals icon next to the necessary entity.
-
-Each assigned portal will be displayed on a separate tab. The order of the tabs depends on the display index you specified.
-
-Theme: select one of the pre-configured themes for the new portal. The possible options are: Default and Black.
-Click [here](resources/black_portal.png) to view a portal with the Black theme applied or click [here](resources/default_portal.png) to view a portal with the Default theme.
-You can also create your own CSS and upload a folder with your personalized theme to `/opt/atsd/conf/portal/themes/`.
-After you upload your custom theme, it will appear in the list of available themes. To apply your style, select it from the Theme list.
-
-Content: specify settings of the portal itself and for widgets you want to add to the portal. For more information, see [Portal Layout](http://axibase.com/products/axibase-time-series-database/visualization/widgets/portal-settings/).
-
-![](resources/portal_conf_edit-300x261.png)
+    **Name**: provide a name for the new portal.
+    
+    **Enabled**: select the check box to enable the portal (otherwise you will not be able to see visualized data).
+    
+    **Template**: select the check box if you want your new portal to be template that you can later assign to various entities. Note, that you will be able to change portal type any time by selecting and deselecting the check box.
+    
+    **Display Index**: index defines the order with which portals assigned to an entity are displayed. To view portals assigned to an entity:
+    
+    a. Click Entities from the top menu.
+    b. Click the Portals icon next to the necessary entity.
+    Each assigned portal will be displayed on a separate tab. The order of the tabs depends on the display index you specified.
+    
+    **Theme**: select one of the pre-configured themes for the new portal. The possible options are: Default and Black.
+    Click [here](resources/black_portal.png) to view a portal with the Black theme applied or click [here](resources/default_portal.png) to view a portal with the Default theme.
+    You can also create your own CSS and upload a folder with your personalized theme to `/opt/atsd/conf/portal/themes/`.
+    After you upload your custom theme, it will appear in the list of available themes. To apply your style, select it from the Theme list.
+    
+    **Content**: specify settings of the portal itself and for widgets you want to add to the portal. For more information, see [Portal Layout](http://axibase.com/products/axibase-time-series-database/visualization/widgets/portal-settings/).
+    
+    ![](resources/portal_conf_edit.png)
 
 ### Learn How To
 
-[Build Portal Layout](http://axibase.com/products/axibase-time-series-database/visualization/widgets/portal-settings/)
+**[Build Portal Layout](http://axibase.com/products/axibase-time-series-database/visualization/widgets/portal-settings/)**
 
-[Create Generic Widgets](http://axibase.com/products/axibase-time-series-database/visualization/widgets/configuring-the-widgets/)
+**[Create Generic Widgets](http://axibase.com/products/axibase-time-series-database/visualization/widgets/configuring-the-widgets/)**
 
-[Create Generic Tables](http://axibase.com/products/axibase-time-series-database/visualization/widgets/description-of-tables/)
+**[Create Generic Tables](http://axibase.com/products/axibase-time-series-database/visualization/widgets/description-of-tables/)**
 
 ### Questions?
 
@@ -63,7 +60,7 @@ A new page with a list of entity groups will appear.
 4. Click Save at the bottom of the page.
 
 
-![](resources/assign_portal-300x72.png)
+![](resources/assign_portal.png)
 
 #### Option 2: Assign a portal with a URL
 
@@ -81,7 +78,7 @@ To load a portal, type the following URL in the address bar. Replace the entry a
 
 [https://atsd.server.com:8088/portals/entity-and-metric?entity={entity}&metric={metric}](https://atsd.server.com:8088/portals/entity-and-metric?entity=%7bentity%7d&metric=%7bmetric%7d)
 
-You can enable adhoc forecasting option. To do so, click forecast in the top right-hand corner of the pre-configured portal window.
+You can enable adhoc forecasting option. To do so, click **forecast** in the top right-hand corner of the pre-configured portal window.
 
-![](resources/forecast6-300x166.png)
+![](resources/forecast6.png)
 
