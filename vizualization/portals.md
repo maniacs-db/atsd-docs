@@ -57,7 +57,7 @@ You can use placeholders while writing portal contents. When you assign the new
 
 [Create and Assign Portals](http://axibase.com/products/axibase-time-series-database/visualization/portals/creating-and-assigning-portals/)
 
-[Build Portal Layout](http://axibase.com/products/axibase-time-series-database/visualization/widgets/portal-settings/)
+[Build Portal Layout](portal-settings.md)
 
 [Create Generic Widgets](http://axibase.com/products/axibase-time-series-database/visualization/widgets/configuring-the-widgets/)
 
