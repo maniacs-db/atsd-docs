@@ -84,7 +84,7 @@ As an alternative to creating groups for each row, add `widgets-per-row` setting
 |  <p>script</p>  |  <p>`script = defaultChartConfig.colors = ['olive']`</p>  |  <p>JavaScript code, evaluated before the addition of widgets into the DOM of the browser.</p>  <p>Allows to reallocate the style of elements, give meaning by default for certain types of widgets or change a certain widget.</p>  <p>(if you show this parameter in the tag [widget], then the argument widget will be given, being itself the main object of this widget and containing it main methods)</p>  |  <p>[View](http://apps.axibase.com/chartlab/808e5846/11/)</p>  | 
 
 
-Freemarker expressions are supported when creating portals. [Learn how to use freemarker expressions in ATSD.](/products/axibase-time-series-database/visualization/freemarker/)
+Freemarker expressions are supported when creating portals. [Learn how to use freemarker expressions in ATSD.](freemarker.md)
 
 #### Configuration Example:
 
