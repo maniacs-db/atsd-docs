@@ -44,6 +44,7 @@ You can use placeholders while writing portal contents. When you assign the new
 
 ## ATSD Built-in Portal Gallery
 
+|  |  |  |
 | --- | --- | --- |
 | HP OpenView ![](resources/ovpm_portal_linux-705x560.png) | Oracle Host ![](resources/oracle_host_portal-705x541.png) | Oracle Databases ![](resources/oracle_databases_poral3-705x596.png) |
 | cAdvisor Host ![](resources/cadvisor_host_portal3-705x559.png) | cAdvisor Disk Detail ![](resources/cadvisor_disk_detail_portal2-705x562.png) | cAdvisor Overview ![](resources/cadvisor_overview_portal-705x505.png) | 
