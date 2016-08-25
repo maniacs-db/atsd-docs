@@ -92,6 +92,7 @@ Virtual tables are currently supported only for series. Access to properties, me
 
 As an alternative to specifying metric names as table names, the `FROM` query can refer to the pre-defined [`atsd_series` table](examples/select-atsd_series.md) and include `metric` name in the `WHERE` clause instead.
 
+# Error
 ```sql
 SELECT entity, metric, datetime, value 
   FROM atsd_series 
@@ -198,6 +199,8 @@ Quotes and double quotes in column names can be escaped by doubling the quote sy
 
 New columns can be created by applying functions and arithmetic expressions to existing columns. The computed columns can be included both in `SELECT` expression as well as in `WHERE`, `HAVING`, and `ORDER BY` clauses.
 
+#Error
+
 ```sql
 SELECT datetime, entity, t1.value + t2.value AS cpu_sysusr
   FROM "mpstat.cpu_system" t1
@@ -206,6 +209,8 @@ WHERE datetime > now - 1*MINUTE
 ```
 
 The list of available predefined columns may be requested with `SELECT *` syntax, except for queries with `GROUP BY` clause.
+
+#Error
 
 ```sql
 SELECT * FROM "mpstat.cpu_busy" t1 
@@ -224,6 +229,8 @@ WHERE datetime >= '2016-06-16T13:00:00.000Z' AND datetime < '2016-06-16T13:10:00
 ```
 
 In case of `JOIN` query, `SELECT *` syntax can be applied to each table separately.
+
+#Error
 
 ```sql
 SELECT t1.*, t2.value FROM "mpstat.cpu_busy" t1 
@@ -365,6 +372,8 @@ WHERE datetime > current_hour
 
 The column can be specified in `SELECT` expression to print out the ordered list of entity group names, separated by semi-colon.
 
+#Error
+
 ```sql
 SELECT datetime, entity, value, entity.groups
   FROM cpu_busy
@@ -393,6 +402,8 @@ entity.groups NOT IN ('group-1', 'group-1') -- entity does NOT belong to any of 
 ```
 
 Entity Group names are case-sensitive.
+
+#Error
 
 ```sql
 SELECT datetime, entity, value, entity.groups
@@ -472,6 +483,8 @@ SELECT datetime, sum(value), sum(value + 100) / 2
 WHERE datetime > now - 10 * minute 
   GROUP BY period(2 minute)
 ```
+
+#Error
 
 ```sql
 SELECT avg(metric1.value*2), sum(metric1.value + metric2.value) 
@@ -1002,6 +1015,8 @@ This is typically the case when multiple metrics are inserted with one command o
 
 However, when merging records for irregular metrics collected by independent sources, `JOIN` results may contain a small subset of rows with coincidentally identical times.
 
+#Error
+
 ```sql
 SELECT datetime, entity, t1.value as cpu, t2.value as mem
   FROM "mpstat.cpu_busy" t1 
@@ -1021,6 +1036,8 @@ The result contains only 2 records out of 75 total. This is because for `JOIN` t
 
 
 Similarly, multiple tables can be merged for series with tags, without the need to enumerate all possible tags in the join condition.
+
+#Error
 
 ```sql
 SELECT datetime, entity, t1.value, t2.value, t1.tags.*
@@ -1049,6 +1066,8 @@ This allows merging of virtual tables with different tag columns, including merg
 
 `USING entity` is supported by both inner and outer JOIN.
 
+#Error
+
 ```sql
 SELECT entity, datetime, AVG(t1.value), AVG(t2.value), tags.*
   FROM mpstat.cpu_busy t1
@@ -1068,6 +1087,8 @@ GROUP BY entity, tags, period(1 minute)
 ### OUTER JOIN
 
 To combine all records from joined tables, use `OUTER JOIN` which returns rows with equal time, entity, and tags as well as rows from one table for which no rows from the other satisfy the join condition.
+
+#Error
 
 ```sql
 SELECT datetime, entity, t1.value as cpu, t2.value as mem
@@ -1090,6 +1111,7 @@ WHERE datetime >= '2016-06-16T13:00:00.000Z' AND datetime < '2016-06-16T13:10:00
 ```
 
 To regularize the series, apply `GROUP BY` with period aggregation and apply one of statistical functions to return one value for the period, for each series.
+#Error
 
 ```sql
 SELECT datetime, entity, avg(t1.value) as avg_cpu, avg(t2.value) as avg_mem
@@ -1111,6 +1133,8 @@ GROUP BY entity, period(1 MINUTE)
 Choice of statistical function to use for value columns depends on the use case. 
 
 `AVG` and percentile functions would smooth the values, whereas `LAST` or `FIRST` functions would select a subset of raw values in a downsampling effect.
+
+#Error
 
 ```sql
 SELECT datetime, entity, LAST(t1.value) as cpu, LAST(t2.value) as mem
